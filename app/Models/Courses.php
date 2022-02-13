@@ -9,10 +9,22 @@ class Courses extends Model
 {
 
 
-    
+
     use HasFactory;
 
 
+    protected $fillable = [
+        'name',
+        'description',
+        'image',
+        'year',
+        'file',
+        'video',
+        'requirements',
+        'category_id',
+        "created_at",
+        "updated_at",
+    ];
 
     public function users(){
         return $this->belongsToMany(User::class);
